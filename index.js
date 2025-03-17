@@ -51,7 +51,7 @@ function render(){
                     <img src="images/icon-comment.png" class="icon">
                     <img src="images/icon-dm.png" class="icon">
                 </div>
-                <h1 id="likes-El${i}">${posts[i].likes} likes</h1>
+                <h1 id="likes-el${i}">${posts[i].likes} likes</h1>
                 <p class="caption"><span>${posts[i].username}</span> ${posts[i].comment}</p>
             </section>
             `

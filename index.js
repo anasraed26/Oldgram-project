@@ -31,8 +31,9 @@ let hpage = document.getElementById("home-page")
 
 function render(){
     if (posts) {
+        let temp = ""
         for(let i = 0; i < posts.length; i++){
-            hpage.innerHTML += `
+            temp += `
             <section id="sec${i}">
                 <div class="flex">
                     <img src="${posts[i].avatar}" class="pfp">
@@ -50,23 +51,32 @@ function render(){
                     <img src="images/icon-comment.png" class="icon">
                     <img src="images/icon-dm.png" class="icon">
                 </div>
-                <h1>${posts[i].likes} likes</h1>
+                <h1 id="likes-El${i}">${posts[i].likes} likes</h1>
                 <p class="caption"><span>${posts[i].username}</span> ${posts[i].comment}</p>
             </section>
             `
+        }
+        hpage.innerHTML = temp
+        for(let i = 0; i < posts.length; i++){
+            let likesEl = document.getElementById(`likes-el${i}`)
             let post = document.getElementById(`post${i}`)
-            console.log(`post${i}`)
             let heart = document.getElementById(`heart${i}`)
-            console.log(`heart${i}`)
             post.addEventListener("dblclick", function(){
                 heart.style.opacity = 1; 
                 setTimeout(() => {
                     heart.style.opacity = 0; 
                 }, 500);
-                console.log("I ve been dbl clicked!")
+                posts[i].likes += 1
+                likesEl.textContent = posts[i].likes + " likes"
             })
         }
     }
-    
 }
 render()
+
+// function minirender(){
+//     for(let i = 0; i < posts.length; i++){
+//         likesel.textContent = posts[i].likes + " likes"
+//     }
+// }
+

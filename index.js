@@ -47,9 +47,9 @@ function render(){
                     <img src="images/heart.png" class="heart" id="heart${i}">
                 </div>
                 <div class="flex">
-                    <img src="images/icon-heart.png" class="icon">
-                    <img src="images/icon-comment.png" class="icon">
-                    <img src="images/icon-dm.png" class="icon">
+                    <img src="images/icon-heart.png" class="icon hic">
+                    <img src="images/icon-comment.png" class="icon cic">
+                    <img src="images/icon-dm.png" class="icon dic">
                 </div>
                 <h1 id="likes-el${i}">${posts[i].likes} likes</h1>
                 <p class="caption"><span>${posts[i].username}</span> ${posts[i].comment}</p>
@@ -73,10 +73,3 @@ function render(){
     }
 }
 render()
-
-// function minirender(){
-//     for(let i = 0; i < posts.length; i++){
-//         likesel.textContent = posts[i].likes + " likes"
-//     }
-// }
-

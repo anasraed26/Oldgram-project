@@ -79,3 +79,13 @@ section {
     position: relative;
     display: inline-block;
 }
+
+.hic:hover {
+    filter: drop-shadow(0px 0px 1px red);
+}
+.cic:hover {
+    filter: drop-shadow(0px 0px 1px cyan);
+}
+.dic:hover {
+    filter: drop-shadow(0px 0px 1px lightgreen);
+}

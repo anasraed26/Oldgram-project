@@ -1,5 +1,5 @@
 # Getting Started
-Install the dependencies and run the project
+Install the dependencies and run the project  # I WAS HERE
 ```
 npm install
 npm start
